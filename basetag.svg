@@ -1,1 +1,14 @@
-<svg id="_0" data-name="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 567.64 213.31"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.71px;}</style></defs><g id="LWPOLYLINE"><path class="cls-1" d="M.35,213H567.28V35.79A35.44,35.44,0,0,0,531.85.35H35.79A35.44,35.44,0,0,0,.35,35.79Z"/></g><g id="LINE"><line class="cls-1" x1="0.35" y1="142.09" x2="567.28" y2="142.09"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="_0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 567.6 200.2" style="enable-background:new 0 0 567.6 200.2;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:0.71;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<g id="LWPOLYLINE">
+	<path class="st0" d="M0.3,200.2h566.9V34.6c0-18.3-15.9-33.1-35.4-33.1H35.8C16.2,1.4,0.4,16.3,0.4,34.6c0,0,0,0,0,0V200.2z"/>
+</g>
+<g id="LINE">
+	<line class="st0" x1="0.3" y1="142.1" x2="567.3" y2="142.1"/>
+</g>
+</svg>

@@ -9,47 +9,51 @@
 <body>
   <button id="downloadBtn">Download SVG</button>
   <script>
-    var draw = SVG().addTo('body').size(567.64, 213.31);
+    function makeTag(prefix, lname, title){
+      var draw = SVG().addTo('body').size(567.64, 213.31);
     
-    // Define styles within the SVG element
-    var style = draw.style(".cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.71px;}");
-    
-    // Define the LWPOLYLINE group
-    var lwPolyline = draw.group().id('LWPOLYLINE');
-    var path = lwPolyline.path("M.35,213H567.28V35.79A35.44,35.44,0,0,0,531.85.35H35.79A35.44,35.44,0,0,0,.35,35.79Z").addClass('cls-1');
+      // Define styles within the SVG element
+      var style = draw.style(".cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.71px;}");
+      
+      // Define the LWPOLYLINE group
+      var lwPolyline = draw.group().id('LWPOLYLINE');
+      var path = lwPolyline.path("M.35,213H567.28V35.79A35.44,35.44,0,0,0,531.85.35H35.79A35.44,35.44,0,0,0,.35,35.79Z").addClass('cls-1');
 
-    // Define the LINE group
-    var line = draw.group().id('LINE');
-    var lineElement = line.line(0.35, 142.09, 567.28, 142.09).addClass('cls-1');
+      // Define the LINE group
+      var line = draw.group().id('LINE');
+      var lineElement = line.line(0.35, 142.09, 567.28, 142.09).addClass('cls-1');
 
-    // Calculate center point of SVG canvas
-    var centerX = 567.64 / 2;
-    var centerY = 213.31 / 2;
+      // Calculate center point of SVG canvas
+      var centerX = 567.64 / 2;
+      var centerY = 213.31 / 2;
 
-    // Create text
-    var text1 = draw.text('Mr. Test');
-    var text1Width = text1.bbox().width;
-    var text1Height = text1.bbox().height;
-    text1.move(centerX - (text1Width / 2) + 42, centerY - (text1Height / 2) - 45);
-    text1.font({ family: 'Arial', size: 30 }).fill('none').stroke({ color: '#000', width: 0.5 });
+      // Create text
+      var text1 = draw.text(prefix + " " + lname);
+      var text1Width = text1.bbox().width;
+      var text1Height = text1.bbox().height;
+      text1.move(centerX - (text1Width / 2) + 42, centerY - (text1Height / 2) - 45);
+      text1.font({ family: 'Arial', size: 30 }).fill('none').stroke({ color: '#000', width: 0.5 });
 
-    var text2 = draw.text('Blank Teacher');
-    var text2Width = text2.bbox().width;
-    var text2Height = text2.bbox().height;
-    text2.move(centerX - (text2Width / 2) + 45, centerY - (text2Height / 2) - 5);
-    text2.font({ family: 'Arial', size: 25 }).fill('none').stroke({ color: '#000', width: 0.5 });
+      var text2 = draw.text(title);
+      var text2Width = text2.bbox().width;
+      var text2Height = text2.bbox().height;
+      text2.move(centerX - (text2Width / 2) + 45, centerY - (text2Height / 2) - 5);
+      text2.font({ family: 'Arial', size: 25 }).fill('none').stroke({ color: '#000', width: 0.5 });
 
-    // Download button click event listener
-    document.getElementById("downloadBtn").addEventListener("click", function() {
-      var svgString = draw.svg();
-      var blob = new Blob([svgString], {type: "image/svg+xml"});
-      var url = window.URL.createObjectURL(blob);
-      var downloadLink = document.createElement("a");
-      downloadLink.href = url;
-      downloadLink.download = "my_svg.svg"; // Set desired filename
-      downloadLink.click();
-      window.URL.revokeObjectURL(url); // Clean up temporary URL
-    });
+      // Download button click event listener
+      document.getElementById("downloadBtn").addEventListener("click", function() {
+        var svgString = draw.svg();
+        var blob = new Blob([svgString], {type: "image/svg+xml"});
+        var url = window.URL.createObjectURL(blob);
+        var downloadLink = document.createElement("a");
+        downloadLink.href = url;
+        downloadLink.download = "my_svg.svg"; // Set desired filename
+        downloadLink.click();
+        window.URL.revokeObjectURL(url); // Clean up temporary URL
+      });
+    }
+
+    makeTag("iiiii", "iiiiiii", "i")
   </script>
 </body>
 </html>
