@@ -11,6 +11,8 @@ prefixes, names, titles = csvparser.parseCsv()
 # Maximum characters allowed per line
 masteri = 0
 
+platesPerSheet = 15
+
 sheetnum = 1
 
 def genSheet():
@@ -19,7 +21,7 @@ def genSheet():
     i = 0
     # Copy the template for each sheet
     sheet_design = design
-    while i <= 15:
+    while i <= platesPerSheet:
         name = names[masteri]
         prefix = prefixes[masteri]
         title = titles[masteri]
